@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Payment</title>
+</head>
+<style>
+    *{
+        background-color: black;
+    }
+
+    .reply{
+        margin-top: 200px;
+        color: white;
+        font-size: 20px;
+        margin-left: 40%;
+    }
+
+    .moto{
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+        margin-left: 40%;
+        clear: both;
+    }
+
+    .btn{
+        margin-left: 45%;
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 6px;
+        padding:20px;
+        text-align: center;
+        width: 200px;
+        font-size: 40px;
+        font-weight: 900;
+        transition: transform 450ms;
+
+    }
+
+    .btn:hover{
+        transform: scale(1.1);
+        background-color: white;
+        color: red;
+    }
+    
+</style>
+<body>
+    {% load static %}
+    <img src="{% static 'images/logo.jpg'%}" width="100px" height="50px" />
+    <div class="reply">
+        Payment done  Rs {{amount}} !!!!! Thank u !!!!!
+    </div>
+    <p class="moto">Watch Movies <br> Tvshows, Series and more. </p>
+    <a href="{% url 'netflix' %}"><button class="btn">Explore</button></a>
+</body>
+</html>

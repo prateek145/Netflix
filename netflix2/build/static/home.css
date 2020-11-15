@@ -1,0 +1,101 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  
+  
+}
+.nav{
+  
+  background-color:black;
+  padding-bottom: 70px;
+
+}
+
+
+.title {
+  color: rgb(216, 65, 65);
+  position: fixed;
+  padding-left: 10px;
+  font-size: 30px;
+}
+
+.lgin {
+  padding-top: 25px;
+  position: fixed;
+  right: 1px;
+}
+
+.btn {
+  cursor: pointer;
+  color: red;
+  padding: 12px 25px 12px 25px;
+  outline: none;
+  border: none;
+  background-color: black;
+  border-radius: 9px;
+  font-size: large;
+  font-weight: 900;
+  transition: transform 450ms;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.image{
+  
+  height: 700px;
+  width: 100%;
+  
+}
+
+.img{
+  background-image: url("../static/daredevil.jpg");
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 700px;
+  z-index: -1;
+  background-color: black;
+}
+
+.first{
+  padding-top: 300px;
+  margin-left: 55%;
+  width: 180px;
+  color: white;
+  position: fixed;
+  
+  
+}
+.second{
+  padding-top: 350px;
+  margin-left: 55%;
+  color: white;
+  font-stretch: condensed;
+  width:400px;
+  position: fixed;
+
+}
+
+.footer{
+  height: 10px;
+  background-color: black;
+  color: white;
+  text-align:right;
+  padding-top: 80px;
+  padding-right: 20px;
+
+}
+
+
+
+
+
+
+

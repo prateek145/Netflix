@@ -1,0 +1,84 @@
+<style>
+    .box{
+        width: auto;
+        overflow: hidden;
+    }
+
+    .headline {
+        color: white;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 430px;
+    }
+
+    .first_box {
+        color: white;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #btn{
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+        background-color: red;
+        color: white;
+        font-weight: 700;
+        transition: transform 450ms;
+        margin-left: 15px;
+    }
+
+    #btn:hover{
+        color: red;
+        background-color: white;
+        transform: scale(1.1);
+    }
+
+    .href_btn{
+        color: white;
+    }
+
+    .href_btn:hover{
+        color: red;
+    }
+
+
+
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+</head>
+
+<body bgcolor="black">
+    <img src="../static/images/logo.jpg" alt="" class="photo" height="45px" width="100px">
+    <div class="box">
+        <h2 class="headline"> Netflix clone by prateek kumar(MCA-v) </h3>
+
+            <div class="first_box">
+                <form method="POST" action=".">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button id="btn" type="submit">Submit</button>
+                    <button id = "btn"><a class="href_btn" href="{% url 'signin' %}">Sign In</a></button>
+                    
+                </form>
+                
+                
+            </div>
+    </div>
+
+</body>
+
+</html>

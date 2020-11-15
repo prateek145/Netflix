@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css'%}" />
+    <title>Netflix Clone</title>
+
+</head>
+
+<body bgcolor="black">
+    <div>
+        <div class="nav">
+
+            <h2 class="title">Netflix Clone </h2>
+
+            <div class="lgin">
+
+                <a href="{% url 'signin' %}"><button class="btn">SignIn</button></a>
+                <a href="{% url 'signup' %}"><button class="btn">SignUp</button></a>
+            </div>
+
+        </div>
+
+        <div class="image">
+            <div class="img"></div>
+            <h2 class="first">Welcome !!!! </h2>
+            <h1 class="second">Watch Unlimited Movies<br>TVshows, Series and more .</h1>
+             
+        </div>
+        <div class="footer">
+            <h4>&copy -> Prateek Kumar(MCA-V)</small>
+
+        </div>
+
+        
+    </div>
+</body>
+
+</html>

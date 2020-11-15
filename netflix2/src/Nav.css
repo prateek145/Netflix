@@ -1,0 +1,33 @@
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 43px;
+    
+    /* this is for the delay in changes in screen */
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    
+}
+
+.nav_black{
+    background-color: #111;
+    
+}
+
+.nav_logo{
+    padding-top: 10px;
+    position: fixed;
+    width: 80px;
+    object-fit: contain;
+    padding-left: 10px;
+}
+
+.nav_avatar{
+    padding-top: 10px;
+    position: fixed;
+    right: 10px;
+    width: 30px;
+
+    object-fit: contain;
+}

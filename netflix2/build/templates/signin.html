@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+
+        }
+
+        .image{
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+            position:absolute;
+
+        }
+
+        .footer{
+            height: 6px;
+            background-color: white;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            margin-top: 56.3%;
+            opacity: 0.3;
+        }
+
+        .logo {
+            padding-left: 5px;
+            padding-top: 5px;
+            position: fixed;
+            background:transparent;
+        }
+
+        .title{
+            padding-top: 18%;
+            padding-left: 37%;    
+        }
+
+        .upper{
+            color: white;
+            font-size: 2vw;
+            font-weight: 700;
+
+        }
+
+        .middle{
+            color: white;
+            font-size:4vw;
+            font-weight: 700;
+            font-size-adjust: unset;
+
+        }
+
+        .bottom{
+            color: white;
+            font-size: 2vw;
+            font-weight: 700;
+
+        }
+
+        .overflow{
+            padding-top: 1vw;
+            overflow: hidden;
+            background: transparent;
+            padding-left: 37%;
+            height: 120px;   
+            
+        }
+
+        .input{
+            border: none;
+            padding:0.5rem;
+            border-radius: 5px;
+            font-size: 1vw;
+            
+        }
+
+        .input1{
+            margin-top: 2px;
+            border: none;
+            padding:0.5rem;
+            border-radius: 5px;
+            font-size: 1vw;
+
+        }
+ 
+
+        #btn {
+            margin-top: 8px;
+            font-weight: 700;
+            font-size: 1vw;
+            color: white;
+            padding: 5px;
+            border-radius: 6px;
+            transition: transform 450ms;
+            border: none;
+            margin-left: 5%;
+            background-color: red;
+
+        }
+
+        #btn:hover {
+            background-color: white;
+            transform: scale(1.2);
+            color: red;
+        }
+
+        .message{
+            color: white;
+        }
+
+        .login{
+            color: red;
+            padding-bottom: 3px;
+        }
+
+        .second_box{
+            color: white;
+            padding-top: 20%;
+            padding-left: 32%;
+
+        }
+
+        .heading{
+            font-size: 3vw;
+            padding-left: 10%;
+        }
+
+        .heading1{
+            padding-top: 4px;
+            font-size: 2vw; 
+        }
+        
+        .second_box_image{
+            margin-top: 45px;
+            height: 20vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .footer1{
+            margin-top: 60px;
+            height: 6px;
+            background-color: white;
+            opacity: 0.3;
+            width: 100%;
+        }
+
+        .third_box{
+            height: 1000px;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="black">
+    {% load static %}
+    <img class="image" src="{% static 'signin1.jpg'%}" />
+    <img class="logo" src="{% static 'images/logo.jpg'%}" width="100px" height="45px"/>
+    <footer class="footer"></footer>
+
+    <div class="title">
+        <p class="upper">wlecome !!!</p>
+        <p class="middle">Unlimited movies, TV<br> shows and more.</p>
+        <p class="bottom">Watch anytime. Cancel anytime.</p>
+
+    </div>
+    
+
+    <div class="overflow">
+        
+            <form action="." method="POST">
+                {% csrf_token %}
+                <input class="input" type="text" placeholder="username" name="username" /><br>
+                <input class="input1" type="password" placeholder="password" name="password" /><br>
+                <button id="btn">Submit</button> <br><br>
+
+                {% for message in messages %}
+                <strong class="message">{{message}}</strong>
+                {% endfor %}
+
+
+            </form>
+
+        
+    </div>
+
+    <div class="second_box">
+        <p class="heading">
+            Enjoy on your TV.
+        </p>
+        <p class="heading1">Watch on smart TVs, PlayStations, Xbox, Chromcast <br>Apple TV, Blu-ray players and more.</p>
+
+    </div>
+
+    <img src="../static/images/secondbox.jpg" alt="" class="second_box_image">
+    <footer class="footer1"></footer>
+
+    <div class="third_box">
+
+    </div>
+    
+
+</body>
+
+</html>
